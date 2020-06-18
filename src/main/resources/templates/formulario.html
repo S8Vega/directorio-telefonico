@@ -30,25 +30,33 @@
 	<div class="container">
 		<h1 th:text="${titulo}"
 			class="text-secondary border border-primary border-top-0 border-left-0 border-right-0"></h1>
-			<a th:href="@{/formulario}">crear contacto</a>
-		<table class="table table-striped">
-			<thead>
+		<form th:action="@{/formulario}" th:object="${contacto}" method="post">
+			<table>
 				<tr>
-					<th>nombre</th>
-					<th>telefono</th>
-					<th>direccion</th>
-					<th>email</th>
+					<td>nombre</td>
+					<td><input type="text" th:field="*{nombre}"
+						class="form-control" /></td>
 				</tr>
-			</thead>
-			<tbody>
-				<tr th:each="contacto: ${contactos}">
-					<td th:text="${contacto.nombre}"></td>
-					<td th:text="${contacto.telefono}"></td>
-					<td th:text="${contacto.direccion}"></td>
-					<td th:text="${contacto.email}"></td>
+				<tr>
+					<td>telefono</td>
+					<td><input type="number" th:field="*{telefono}"
+						class="form-control" /></td>
 				</tr>
-			</tbody>
-		</table>
+				<tr>
+					<td>direccion</td>
+					<td><input type="text" th:field="*{direccion}"
+						class="form-control" /></td>
+				</tr>
+				<tr>
+					<td>email</td>
+					<td><input type="email" th:field="*{email}"
+						class="form-control" /></td>
+				</tr>
+				<tr>
+					<td><input type="submit" value="crear contacto" class="btn btn-primary"/></td>
+				</tr>
+			</table>
+		</form>
 	</div>
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
 		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"

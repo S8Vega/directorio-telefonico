@@ -8,6 +8,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.PrePersist;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -24,7 +25,7 @@ public class Contacto implements Serializable {
 	private String direccion;
 	private String email;
 	@Column(name = "create_at")
-	@Temporal(TemporalType.DATE)
+	@Temporal(TemporalType.TIMESTAMP)
 	private Date createAt;
 	private static final long serialVersionUID = 1L;
 
@@ -40,6 +41,11 @@ public class Contacto implements Serializable {
 		this.direccion = direccion;
 		this.email = email;
 		this.createAt = createAt;
+	}
+
+	@PrePersist
+	public void prePersist() {
+		createAt = new Date();
 	}
 
 	@Override

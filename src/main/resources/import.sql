@@ -1,0 +1,10 @@
+insert into contactos (nombre, telefono, direccion, email) values ('Susi Waight', '558-989-7749', '183 Arapahoe Place', 'swaight0@amazon.de');
+insert into contactos (nombre, telefono, direccion, email) values ('Ode Freear', '999-323-2662', '5765 Sullivan Way', 'ofreear1@google.com.au');
+insert into contactos (nombre, telefono, direccion, email) values ('Roley Raddan', '364-641-2201', '2 Main Lane', 'rraddan2@moonfruit.com');
+insert into contactos (nombre, telefono, direccion, email) values ('Upton Filipovic', '713-208-3157', '58978 Colorado Alley', 'ufilipovic3@opera.com');
+insert into contactos (nombre, telefono, direccion, email) values ('Pamella Wetton', '629-813-7827', '2006 Randy Trail', 'pwetton4@issuu.com');
+insert into contactos (nombre, telefono, direccion, email) values ('Sky Wraxall', '319-922-2409', '42 Buena Vista Parkway', 'swraxall5@pcworld.com');
+insert into contactos (nombre, telefono, direccion, email) values ('Cornelle Woodcock', '435-782-6629', '8430 Waubesa Avenue', 'cwoodcock6@exblog.jp');
+insert into contactos (nombre, telefono, direccion, email) values ('Ritchie Rewbottom', '834-872-3455', '25181 Shasta Plaza', 'rrewbottom7@sbwire.com');
+insert into contactos (nombre, telefono, direccion, email) values ('Rabbi Caslett', '189-112-0424', '9 Ridgeway Plaza', 'rcaslett8@nih.gov');
+insert into contactos (nombre, telefono, direccion, email) values ('Allen Grint', '704-906-4534', '399 Londonderry Court', 'agrint9@1und1.de');

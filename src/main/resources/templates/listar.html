@@ -20,7 +20,7 @@
 
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav mr-auto">
-				<li class="nav-item active"><a class="nav-link" href="#">Home
+				<li class="nav-item active"><a class="nav-link" th:href="@{/listar}">Home
 						<span class="sr-only">(current)</span>
 				</a></li>
 				<li class="nav-item"><a class="nav-link" th:href="@{/listar}">Contactos</a></li>
@@ -30,7 +30,8 @@
 	<div class="container">
 		<h1 th:text="${titulo}"
 			class="text-secondary border border-primary border-top-0 border-left-0 border-right-0"></h1>
-			<a th:href="@{/formulario}">crear contacto</a>
+		<a th:href="@{/formulario}" class="btn btn-success btn-xs">crear
+			contacto</a>
 		<table class="table table-striped">
 			<thead>
 				<tr>
@@ -38,6 +39,8 @@
 					<th>telefono</th>
 					<th>direccion</th>
 					<th>email</th>
+					<th>editar</th>
+					<th>eliminar</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -46,6 +49,10 @@
 					<td th:text="${contacto.telefono}"></td>
 					<td th:text="${contacto.direccion}"></td>
 					<td th:text="${contacto.email}"></td>
+					<td><a th:href="@{/formulario/} + ${contacto.id}"
+						class="btn btn-primary btn-xs">editar</a></td>
+					<td><a th:href="@{/eliminar/} + ${contacto.id}"
+						class="btn btn-danger btn-xs">eliminar</a></td>
 				</tr>
 			</tbody>
 		</table>

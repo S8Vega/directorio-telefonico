@@ -10,7 +10,7 @@ import com.springboot.app.modelo.entidad.Contacto;
 
 @Service("ContactoServicioImpl")
 public class ContactoServicioImpl implements IServicio {
-	
+
 	@Autowired
 	private IContactoDao contactoDao;
 
@@ -33,5 +33,5 @@ public class ContactoServicioImpl implements IServicio {
 	public void delete(Long id) {
 		contactoDao.deleteById(id);
 	}
-	
+
 }
